@@ -1,4 +1,5 @@
 import {Component} from 'react'
+import Loader from 'react-loader-spinner'
 
 import './index.css'
 
@@ -12,7 +13,7 @@ import './index.css'
 // }
 
 class BlogItemDetails extends Component {
-  state = {blogData: []}
+  state = {blogData: [], isLoading: true}
 
   componentDidMount() {
     this.getBlogItemData()
@@ -28,13 +29,13 @@ class BlogItemDetails extends Component {
     const updatedData = {
       imageUrl: data.image_url,
       title: data.title,
-      auther: data.auther,
+      author: data.author,
       avatarUrl: data.avatar_url,
       content: data.content,
       id: data.id,
       topic: data.topic,
     }
-    this.setState({blogData: updatedData})
+    this.setState({blogData: updatedData, isLoading: false})
   }
 
   renderBlogItemDetails = () => {
@@ -56,7 +57,16 @@ class BlogItemDetails extends Component {
   }
 
   render() {
-    return <div className="blog-container">{this.renderBlogItemDetails()}</div>
+    const {isLoading} = this.state
+    return (
+      <>
+        {isLoading ? (
+          <Loader color="#00BFFF" size={50} width={50} />
+        ) : (
+          <div className="blog-container">{this.renderBlogItemDetails()}</div>
+        )}
+      </>
+    )
   }
 }
 
