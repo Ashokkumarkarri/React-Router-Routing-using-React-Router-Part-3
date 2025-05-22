@@ -55,4 +55,60 @@ React Router matches this path and renders the BlogItemDetails component.
 
 ✅ This route helps us display details for each specific blog item on a new page.
 
----
+--- 
+
+## ✅ Step 3: Make API Call for Specific BlogItemDetails
+
+🧩 When a component is rendered using `Route`, React Router automatically provides some built-in **props** like:
+
+- `match` – info about how the route matched
+- `location` – current URL info
+- `history` – browser history methods
+
+➡️ We used `match` to get **route parameters** (in our case, the `id` from `/blogs/:id`).
+
+```js
+const { match } = this.props
+const { params } = match
+const { id } = params
+```
+📌 Here’s what happens:
+
+match.params gives us the id that was clicked (e.g., /blogs/3 → id = 3)
+We use this id to fetch data for that specific blog
+
+🔄 Making the API Call on Mount
+When the component loads (mounts), we call the API using the extracted id.
+
+```js
+componentDidMount() {
+  this.getBlogItemData()
+}
+
+getBlogItemData = async () => {
+  const { match } = this.props
+  const { params } = match
+  const { id } = params
+
+  const response = await fetch(`https://apis.ccbp.in/blogs/${id}`)
+  const data = await response.json()
+
+  const updatedData = {
+    imageUrl: data.image_url,
+    title: data.title,
+    auther: data.auther,
+    avatarUrl: data.avatar_url,
+    content: data.content,
+    id: data.id,
+    topic: data.topic,
+  }
+
+  this.setState({ blogData: updatedData })
+}
+
+```
+We converted snake_case keys from the API to camelCase
+
+We stored the cleaned blog data in the component’s state using setState
+
+✅ This ensures that each blog page loads and displays its own content based on the URL id.
