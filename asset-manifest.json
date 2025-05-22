@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/React-Router-Routing-using-React-Router-Part-3/static/css/main.60ea890c.chunk.css",
+    "main.js": "/React-Router-Routing-using-React-Router-Part-3/static/js/main.fe0f2efa.chunk.js",
+    "main.js.map": "/React-Router-Routing-using-React-Router-Part-3/static/js/main.fe0f2efa.chunk.js.map",
+    "runtime-main.js": "/React-Router-Routing-using-React-Router-Part-3/static/js/runtime-main.cb3ee3b8.js",
+    "runtime-main.js.map": "/React-Router-Routing-using-React-Router-Part-3/static/js/runtime-main.cb3ee3b8.js.map",
+    "static/css/2.7a8f3fa9.chunk.css": "/React-Router-Routing-using-React-Router-Part-3/static/css/2.7a8f3fa9.chunk.css",
+    "static/js/2.9fcc0231.chunk.js": "/React-Router-Routing-using-React-Router-Part-3/static/js/2.9fcc0231.chunk.js",
+    "static/js/2.9fcc0231.chunk.js.map": "/React-Router-Routing-using-React-Router-Part-3/static/js/2.9fcc0231.chunk.js.map",
+    "index.html": "/React-Router-Routing-using-React-Router-Part-3/index.html",
+    "static/css/2.7a8f3fa9.chunk.css.map": "/React-Router-Routing-using-React-Router-Part-3/static/css/2.7a8f3fa9.chunk.css.map",
+    "static/css/main.60ea890c.chunk.css.map": "/React-Router-Routing-using-React-Router-Part-3/static/css/main.60ea890c.chunk.css.map",
+    "static/js/2.9fcc0231.chunk.js.LICENSE.txt": "/React-Router-Routing-using-React-Router-Part-3/static/js/2.9fcc0231.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cb3ee3b8.js",
+    "static/css/2.7a8f3fa9.chunk.css",
+    "static/js/2.9fcc0231.chunk.js",
+    "static/css/main.60ea890c.chunk.css",
+    "static/js/main.fe0f2efa.chunk.js"
+  ]
+}
