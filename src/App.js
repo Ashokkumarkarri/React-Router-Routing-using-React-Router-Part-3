@@ -10,7 +10,7 @@ import BlogItemDetails from './components/BlogItemDetails'
 import './App.css'
 
 const App = () => (
-  <BrowserRouter>
+  <BrowserRouter basename="/React-Router-Routing-using-React-Router-Part-3">
     <Header />
     <Switch>
       <Route exact path="/" component={BlogsList} />

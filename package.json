@@ -1,4 +1,5 @@
 {
+  "homepage": "https://ashokkumarkarri.github.io/React-Router-Routing-using-React-Router-Part-3",
   "name": "blogs-list",
   "private": true,
   "version": "1.0.0",
@@ -28,6 +29,8 @@
     "react-scripts": "4.0.3"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
