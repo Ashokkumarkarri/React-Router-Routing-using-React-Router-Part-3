@@ -34,3 +34,25 @@ In the next step, we’ll add a route to display the full blog details.
 
 ---
 
+## ✅ Step 2: Add BlogItemDetails Route
+
+➡️ In `App.js` or your main routing file, we added a new route for individual blog items.
+
+```js
+<Route exact path="/blogs/:id" component={BlogItemDetails} />
+```
+🛣️ Here, /blogs/:id is a dynamic route — :id acts like a variable called a route param.
+
+This param captures the id from the URL when a user clicks a blog.
+
+🧠 For example:
+
+If the user clicks a blog with id 1, the URL becomes /blogs/1.
+
+React Router matches this path and renders the BlogItemDetails component.
+
+📌 Inside BlogItemDetails, you can access this id param to fetch or display the specific blog details.
+
+✅ This route helps us display details for each specific blog item on a new page.
+
+---
